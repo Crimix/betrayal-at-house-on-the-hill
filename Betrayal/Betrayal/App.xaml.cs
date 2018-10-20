@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Betrayal.Pages;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Color = Betrayal.Colors.Color;
@@ -15,8 +16,8 @@ namespace Betrayal
         {
             InitializeComponent();
 
-
-            MainPage = new MainPage();
+            CreateCharacters();
+            MainPage = new ColorSelector();
         }
 
         protected override void OnStart()
@@ -215,6 +216,66 @@ namespace Betrayal
                 Base_Might_Index = 2,
                 Base_Sanity_Index = 2,
                 Base_Knowledge_Index = 4
+            });
+
+            characters.Add(new Character()
+            {
+                ID = 10,
+                Name = "Father Rhinehardt",
+                Age = 62,
+                Birthday = new DateTime(DateTime.Now.Year, 4, 29),
+                Color = Color.WHITE,
+                Height = "5'9",
+                Weight = 185,
+                Hobbies = "Fencing, Gardening",
+                Speed = new[] { 2, 3, 3, 4, 5, 6, 7, 7 },
+                Might = new[] { 1, 2, 2, 4, 4, 5, 5, 7 },
+                Sanity = new[] { 3, 4, 5, 5, 6, 7, 7, 8 },
+                Knowledge = new[] { 1, 3, 3, 4, 5, 6, 6, 8 },
+                Base_Speed_Index = 2,
+                Base_Might_Index = 2,
+                Base_Sanity_Index = 4,
+                Base_Knowledge_Index = 3
+            });
+
+            characters.Add(new Character()
+            {
+                ID = 11,
+                Name = "Zoe Ingstrom",
+                Age = 8,
+                Birthday = new DateTime(DateTime.Now.Year, 11, 5),
+                Color = Color.YELLOW,
+                Height = "3'9",
+                Weight = 49,
+                Hobbies = "Dolls, Music",
+                Speed = new[] { 4, 4, 4, 4, 5, 6, 8, 8 },
+                Might = new[] { 2, 2, 3, 3, 4, 4, 6, 7 },
+                Sanity = new[] { 3, 4, 5, 5, 6, 6, 7, 8 },
+                Knowledge = new[] { 1, 2, 3, 4, 4, 5, 5, 5 },
+                Base_Speed_Index = 3,
+                Base_Might_Index = 3,
+                Base_Sanity_Index = 2,
+                Base_Knowledge_Index = 2
+            });
+
+            characters.Add(new Character()
+            {
+                ID = 12,
+                Name = "Missy Dubourde",
+                Age = 9,
+                Birthday = new DateTime(DateTime.Now.Year, 2, 14),
+                Color = Color.YELLOW,
+                Height = "4'2",
+                Weight = 49,
+                Hobbies = "Swimming, Medicine",
+                Speed = new[] { 3, 4, 5, 6, 6, 6, 7, 7 },
+                Might = new[] { 2, 3, 3, 3, 4, 5, 6, 7 },
+                Sanity = new[] { 1, 2, 3, 4, 5, 5, 6, 7 },
+                Knowledge = new[] { 2, 3, 4, 4, 5, 6, 6, 6 },
+                Base_Speed_Index = 2,
+                Base_Might_Index = 3,
+                Base_Sanity_Index = 2,
+                Base_Knowledge_Index = 3
             });
         }
     }
