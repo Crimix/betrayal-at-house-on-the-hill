@@ -16,8 +16,16 @@ namespace Betrayal
         {
             InitializeComponent();
 
-            CreateCharacters();
-            MainPage = new ColorSelector();
+            // This lookup NOT required for Windows platforms - the Culture will be automatically set
+            if (Device.RuntimePlatform == Device.iOS || Device.RuntimePlatform == Device.Android)
+            {
+                var ci = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
+                Resx.AppResources.Culture = ci;
+                DependencyService.Get<ILocalize>().SetLocale(ci);
+            }
+
+            //CreateCharacters();
+            MainPage = new NavigationPage(new ColorSelector());
         }
 
         protected override void OnStart()

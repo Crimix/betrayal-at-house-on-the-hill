@@ -29,15 +29,18 @@ namespace Betrayal
 
         }
 
-        public int GetDaysToBirthDay()
+        public int GetDaysToBirthDay
         {
-            DateTime today = DateTime.Today;
-            DateTime next = Birthday.AddYears(today.Year - Birthday.Year);
+            get
+            {
+                DateTime today = DateTime.Today;
+                DateTime next = Birthday.AddYears(today.Year - Birthday.Year);
 
-            if (next < today)
-                next = next.AddYears(1);
+                if (next < today)
+                    next = next.AddYears(1);
 
-            return (next - today).Days;
+                return (next - today).Days;
+            }
         }
     }
 }
