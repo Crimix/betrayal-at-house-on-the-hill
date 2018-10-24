@@ -28,7 +28,8 @@ namespace Betrayal.Pages
                 var answer = await DisplayAlert(AppResources.confirm, string.Format(AppResources.confirmcharacter, ((Character)e.Item).Name), AppResources.yes, AppResources.no);
                 if (answer)
                 {
-                    Console.WriteLine(e.Item);
+                    DataStore.Save(DataStoreKeys.Keys.Character_ID, ((Character)e.Item).ID);
+                    App.Current.MainPage = new NavigationPage(new Game());
                 }
 
             }

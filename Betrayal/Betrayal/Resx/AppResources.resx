@@ -138,8 +138,8 @@
   <data name="green" xml:space="preserve">
     <value>Green</value>
   </data>
-  <data name="Might" xml:space="preserve">
-    <value />
+  <data name="might_stats" xml:space="preserve">
+    <value>Might: {0}</value>
   </data>
   <data name="name" xml:space="preserve">
     <value>Name: {0}</value>
@@ -164,5 +164,41 @@
   </data>
   <data name="yes" xml:space="preserve">
     <value>Yes</value>
+  </data>
+  <data name="age" xml:space="preserve">
+    <value>Age: {0}</value>
+  </data>
+  <data name="birthday" xml:space="preserve">
+    <value>Birthday: {0}</value>
+  </data>
+  <data name="knowledge" xml:space="preserve">
+    <value>Knowledge</value>
+  </data>
+  <data name="knowledge_stats" xml:space="preserve">
+    <value>Knowledge: {0}</value>
+  </data>
+  <data name="might" xml:space="preserve">
+    <value>Might</value>
+  </data>
+  <data name="sanity" xml:space="preserve">
+    <value>Sanity</value>
+  </data>
+  <data name="sanity_stats" xml:space="preserve">
+    <value>Sanity: {0}</value>
+  </data>
+  <data name="speed" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="speed_stats" xml:space="preserve">
+    <value>Speed: {0}</value>
+  </data>
+  <data name="yourcharacter" xml:space="preserve">
+    <value>Your Character</value>
+  </data>
+  <data name="newgame" xml:space="preserve">
+    <value>New game</value>
+  </data>
+  <data name="surenewgame" xml:space="preserve">
+    <value>Are you sure you want to start a new game?</value>
   </data>
 </root>

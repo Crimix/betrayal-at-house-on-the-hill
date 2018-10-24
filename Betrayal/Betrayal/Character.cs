@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using static Betrayal.Colors;
+using Betrayal.Resx;
+using Xamarin.Forms;
+using Color = Betrayal.Colors.Color;
 
 namespace Betrayal
 {
@@ -40,6 +42,111 @@ namespace Betrayal
                     next = next.AddYears(1);
 
                 return (next - today).Days;
+            }
+        }
+
+        public string FormattedBirthday
+        {
+            get
+            {
+                DateTime bd = Birthday.AddYears(-Age);
+
+                return bd.ToString("d");
+            }
+        }
+
+        public FormattedString FormattedMight
+        {
+            get
+            {
+                FormattedString fs = new FormattedString();
+                fs.Spans.Add(new Span { Text = AppResources.might + ": [ " });
+                int l = Might.Length;
+                for(int i = 0; i < l; i++){
+                    if(i == Base_Might_Index)
+                    {
+                        fs.Spans.Add(new Span { Text = Might[i].ToString() + " ", TextColor = Xamarin.Forms.Color.Green });
+                    }
+                    else
+                    {
+                        fs.Spans.Add(new Span { Text = Might[i].ToString() + " " });
+                    }
+                }
+                fs.Spans.Add(new Span { Text = "]" });
+
+                return fs;
+            }
+        }
+
+        public FormattedString FormattedSpeed
+        {
+            get
+            {
+                FormattedString fs = new FormattedString();
+                fs.Spans.Add(new Span { Text = AppResources.speed + ": [ " });
+                int l = Speed.Length;
+                for (int i = 0; i < l; i++)
+                {
+                    if (i == Base_Speed_Index)
+                    {
+                        fs.Spans.Add(new Span { Text = Speed[i].ToString() + " ", TextColor = Xamarin.Forms.Color.Green });
+                    }
+                    else
+                    {
+                        fs.Spans.Add(new Span { Text = Speed[i].ToString() + " " });
+                    }
+                }
+                fs.Spans.Add(new Span { Text = "]" });
+
+                return fs;
+            }
+        }
+
+        public FormattedString FormattedSanity
+        {
+            get
+            {
+                FormattedString fs = new FormattedString();
+                fs.Spans.Add(new Span { Text = AppResources.sanity + ": [ " });
+                int l = Sanity.Length;
+                for (int i = 0; i < l; i++)
+                {
+                    if (i == Base_Sanity_Index)
+                    {
+                        fs.Spans.Add(new Span { Text = Sanity[i].ToString() + " ", TextColor = Xamarin.Forms.Color.Green });
+                    }
+                    else
+                    {
+                        fs.Spans.Add(new Span { Text = Sanity[i].ToString() + " " });
+                    }
+                }
+                fs.Spans.Add(new Span { Text = "]" });
+
+                return fs;
+            }
+        }
+
+        public FormattedString FormattedKnowledge
+        {
+            get
+            {
+                FormattedString fs = new FormattedString();
+                fs.Spans.Add(new Span { Text = AppResources.knowledge + ": [ " });
+                int l = Knowledge.Length;
+                for (int i = 0; i < l; i++)
+                {
+                    if (i == Base_Knowledge_Index)
+                    {
+                        fs.Spans.Add(new Span { Text = Knowledge[i].ToString() + " ", TextColor = Xamarin.Forms.Color.Green });
+                    }
+                    else
+                    {
+                        fs.Spans.Add(new Span { Text = Knowledge[i].ToString() + " " });
+                    }
+                }
+                fs.Spans.Add(new Span { Text = "]" });
+
+                return fs;
             }
         }
     }

@@ -6,19 +6,19 @@
              Title="{i18n:Translate characterselector}">
     <ContentPage.Content>
         <StackLayout Padding="20,20,20,20">
-            <ListView x:Name="listView" ItemTapped="ListView_ItemTapped">
+            <ListView x:Name="listView" ItemTapped="ListView_ItemTapped" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Orientation="Vertical">
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding Name}" FontSize="Default" />
-                                    <Label Text="{Binding Birthday}" FontSize="Default" />
-                                </StackLayout>
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding GetDaysToBirthDay}" FontSize="Default" />
-                                    <Label Text="{Binding Age}" FontSize="Default" />
-                                </StackLayout>
+                            <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" Margin="0,0,0,20">
+                                <Label Text="{Binding Name}" FontSize="Medium" />
+                                <Label Text="{Binding Age, StringFormat={i18n:Translate age}}" FontSize="Default" />
+                                <Label Text="{Binding FormattedBirthday, StringFormat={i18n:Translate birthday}}" FontSize="Default" />
+                                <Label Text="{Binding GetDaysToBirthDay, StringFormat={i18n:Translate daystobd}}" FontSize="Default" />
+                                <Label FormattedText="{Binding FormattedSpeed}" FontSize="Default" />
+                                <Label FormattedText="{Binding FormattedMight}" FontSize="Default" />
+                                <Label FormattedText="{Binding FormattedSanity}" FontSize="Default" />
+                                <Label FormattedText="{Binding FormattedKnowledge}" FontSize="Default" />
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

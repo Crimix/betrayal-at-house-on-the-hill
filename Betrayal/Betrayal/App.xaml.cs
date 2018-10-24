@@ -25,7 +25,10 @@ namespace Betrayal
             }
 
             CreateCharacters();
-            MainPage = new NavigationPage(new ColorSelector());
+            if (DataStore.Get(DataStoreKeys.Keys.Character_ID) == null)
+                MainPage = new NavigationPage(new ColorSelector());
+            else
+                MainPage = new NavigationPage(new Game());
         }
 
         protected override void OnStart()
