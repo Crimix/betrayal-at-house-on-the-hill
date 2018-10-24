@@ -120,14 +120,29 @@
   <data name="blue" xml:space="preserve">
     <value>Blue</value>
   </data>
+  <data name="characterselector" xml:space="preserve">
+    <value>Character Selector</value>
+  </data>
   <data name="colorselector" xml:space="preserve">
     <value>Color Selector</value>
   </data>
   <data name="confirm" xml:space="preserve">
     <value>Confirm</value>
   </data>
+  <data name="confirmcharacter" xml:space="preserve">
+    <value>Are you sure you want to play as {0}?</value>
+  </data>
+  <data name="daystobd" xml:space="preserve">
+    <value>Days to birthday: {0}</value>
+  </data>
   <data name="green" xml:space="preserve">
     <value>Green</value>
+  </data>
+  <data name="Might" xml:space="preserve">
+    <value />
+  </data>
+  <data name="name" xml:space="preserve">
+    <value>Name: {0}</value>
   </data>
   <data name="no" xml:space="preserve">
     <value>No</value>

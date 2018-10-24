@@ -37,6 +37,13 @@ namespace Betrayal.Pages
             if (e?.Item != null)
             {
                 var answer = await DisplayAlert(AppResources.confirm, string.Format(AppResources.sure, e.Item), AppResources.yes, AppResources.no);
+                if (answer)
+                {
+                    Color color = Color.BLUE;
+                    colors.TryGetValue(e.Item.ToString(), out color);
+                    App.Current.MainPage = new NavigationPage(new CharacterSelector(color));
+                }
+     
             }
         }
     }

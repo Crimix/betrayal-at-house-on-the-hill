@@ -70,6 +70,15 @@ namespace Betrayal.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Character Selector.
+        /// </summary>
+        internal static string characterselector {
+            get {
+                return ResourceManager.GetString("characterselector", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Color Selector.
         /// </summary>
         internal static string colorselector {
@@ -88,11 +97,47 @@ namespace Betrayal.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to play as {0}?.
+        /// </summary>
+        internal static string confirmcharacter {
+            get {
+                return ResourceManager.GetString("confirmcharacter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Days to birthday: {0}.
+        /// </summary>
+        internal static string daystobd {
+            get {
+                return ResourceManager.GetString("daystobd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Green.
         /// </summary>
         internal static string green {
             get {
                 return ResourceManager.GetString("green", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string Might {
+            get {
+                return ResourceManager.GetString("Might", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name: {0}.
+        /// </summary>
+        internal static string name {
+            get {
+                return ResourceManager.GetString("name", resourceCulture);
             }
         }
         
