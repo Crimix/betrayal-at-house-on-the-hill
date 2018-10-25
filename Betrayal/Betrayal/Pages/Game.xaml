@@ -7,9 +7,11 @@
              Title="{i18n:Translate yourcharacter}">
     <ContentPage.Content>
         <StackLayout>
-            <Label x:Name="name" FontSize="Large" />
+            <Button Text="{i18n:Translate newgame}" Clicked="Restart_Button_Clicked" HorizontalOptions="Start"/>
+            <Button Text="{i18n:Translate info}" Clicked="Info_Button_Clicked" HorizontalOptions="Start"/>
+            <Button Text="{i18n:Translate reset}" Clicked="Reset_Button_Clicked" HorizontalOptions="Start"/>
             <sk:SKCanvasView x:Name="canvas"/>
-            <Button Text="{i18n:Translate newgame}" Clicked="Restart_Button_Clicked"/>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

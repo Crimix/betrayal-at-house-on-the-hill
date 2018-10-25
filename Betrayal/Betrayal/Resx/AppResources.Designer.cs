@@ -142,6 +142,15 @@ namespace Betrayal.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Info.
+        /// </summary>
+        internal static string info {
+            get {
+                return ResourceManager.GetString("info", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Knowledge.
         /// </summary>
         internal static string knowledge {
@@ -219,6 +228,15 @@ namespace Betrayal.Resx {
         internal static string red {
             get {
                 return ResourceManager.GetString("red", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset.
+        /// </summary>
+        internal static string reset {
+            get {
+                return ResourceManager.GetString("reset", resourceCulture);
             }
         }
         

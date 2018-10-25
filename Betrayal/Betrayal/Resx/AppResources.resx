@@ -201,4 +201,10 @@
   <data name="surenewgame" xml:space="preserve">
     <value>Are you sure you want to start a new game?</value>
   </data>
+  <data name="info" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
 </root>

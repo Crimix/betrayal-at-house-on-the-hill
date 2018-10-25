@@ -24,5 +24,15 @@ namespace Betrayal.Pages
             {
             }
         }
+
+        private void Reset_Button_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Info_Button_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
