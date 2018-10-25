@@ -114,22 +114,23 @@ namespace Betrayal.Pages
 
         private void EnableControls()
         {
-            if(currentSpeed != max-1)
-                speedMinus.IsEnabled = true;
-            if (currentSpeed != min+1)
+            Console.WriteLine(currentSpeed);
+            if(currentSpeed != max)
                 speedPlus.IsEnabled = true;
-            if (currentMight != max - 1)
-                mightMinus.IsEnabled = true;
-            if (currentMight != min + 1)
+            if (currentSpeed != min)
+                speedMinus.IsEnabled = true;
+            if (currentMight != max)
                 mightPlus.IsEnabled = true;
-            if (currentSanity != max - 1)
-                sanityMinus.IsEnabled = true;
-            if (currentSanity != min + 1)
+            if (currentMight != min)
+                mightMinus.IsEnabled = true;
+            if (currentSanity != max)
                 sanityPlus.IsEnabled = true;
-            if (currentKnowledge != max - 1)
-                knowledgeMinus.IsEnabled = true;
-            if (currentKnowledge != min + 1)
+            if (currentSanity != min)
+                sanityMinus.IsEnabled = true;
+            if (currentKnowledge != max)
                 knowledgePlus.IsEnabled = true;
+            if (currentKnowledge != min)
+                knowledgeMinus.IsEnabled = true;
         }
 
         private void DisableControls()
