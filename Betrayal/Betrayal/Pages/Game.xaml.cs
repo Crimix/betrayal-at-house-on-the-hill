@@ -18,6 +18,11 @@ namespace Betrayal.Pages
     {
         private Character character;
 
+        private int currentSpeed = -1;
+        private int currentMight = -1;
+        private int currentSanity = -1;
+        private int currentKnowlagde = -1;
+
         public Game()
         {
             InitializeComponent();
@@ -36,6 +41,29 @@ namespace Betrayal.Pages
 
             if (!error)
                 character = App.characters.Find(x => x.ID == id);
+
+            if(character != null)
+            {
+                if (DataStore.Get(DataStoreKeys.Keys.Current_Might) == null)
+                    currentMight = character.Base_Might_Index;
+                else
+                    currentMight = (int)DataStore.Get(DataStoreKeys.Keys.Current_Might);
+
+                if (DataStore.Get(DataStoreKeys.Keys.Current_Speed) == null)
+                    currentSpeed = character.Base_Speed_Index;
+                else
+                    currentSpeed = (int)DataStore.Get(DataStoreKeys.Keys.Current_Speed);
+
+                if (DataStore.Get(DataStoreKeys.Keys.Current_Sanity) == null)
+                    currentSanity = character.Base_Sanity_Index;
+                else
+                    currentSanity = (int)DataStore.Get(DataStoreKeys.Keys.Current_Sanity);
+
+                if (DataStore.Get(DataStoreKeys.Keys.Current_Knowledge) == null)
+                    currentKnowlagde = character.Base_Knowledge_Index;
+                else
+                    currentKnowlagde = (int)DataStore.Get(DataStoreKeys.Keys.Current_Knowledge);
+            }
         }
 
 
@@ -51,9 +79,12 @@ namespace Betrayal.Pages
                 Assembly assembly = GetType().GetTypeInfo().Assembly;
                 string[] images = new string[5];
                 images[0] = character.Image;
-                images[1] = "Betrayal.Resources.might_dead.png";
+                images[1] = "Betrayal.Resources.overlays.speed_"+ currentSpeed+ ".png";
+                images[2] = "Betrayal.Resources.overlays.might_" + currentMight + ".png";
+                images[3] = "Betrayal.Resources.overlays.sanity_" + currentSanity + ".png";
+                images[4] = "Betrayal.Resources.overlays.knowledge_" + currentKnowlagde + ".png";
 
-                foreach(string s in images)
+                foreach (string s in images)
                 {
                     if(!string.IsNullOrWhiteSpace(s))
                         using (Stream stream = assembly.GetManifestResourceStream(s))
@@ -86,7 +117,6 @@ namespace Betrayal.Pages
         private void Reset_Button_Clicked(object sender, EventArgs e)
         {
             Device.BeginInvokeOnMainThread(() => { canvas.InvalidateSurface(); });
-            Console.WriteLine("reset");
         }
 
         private void Info_Button_Clicked(object sender, EventArgs e)
