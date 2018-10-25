@@ -66,7 +66,8 @@ namespace Betrayal
                 Base_Speed_Index = 2,
                 Base_Might_Index = 3,
                 Base_Sanity_Index = 2,
-                Base_Knowledge_Index = 3
+                Base_Knowledge_Index = 3,
+                Image = "Betrayal.Resources.blue_1.png"
             });
 
             characters.Add(new Character()
@@ -86,7 +87,8 @@ namespace Betrayal
                 Base_Speed_Index = 3,
                 Base_Might_Index = 2,
                 Base_Sanity_Index = 2,
-                Base_Knowledge_Index = 3
+                Base_Knowledge_Index = 3,
+                Image = "Betrayal.Resources.blue_2.png"
             });
 
             characters.Add(new Character()
@@ -106,7 +108,8 @@ namespace Betrayal
                 Base_Speed_Index = 2,
                 Base_Might_Index = 3,
                 Base_Sanity_Index = 3,
-                Base_Knowledge_Index = 2
+                Base_Knowledge_Index = 2,
+                Image = "Betrayal.Resources.green_1.png"
             });
 
             characters.Add(new Character()
@@ -126,7 +129,8 @@ namespace Betrayal
                 Base_Speed_Index = 3,
                 Base_Might_Index = 2,
                 Base_Sanity_Index = 3,
-                Base_Knowledge_Index = 2
+                Base_Knowledge_Index = 2,
+                Image = "Betrayal.Resources.green_2.png"
             });
 
             characters.Add(new Character()
@@ -146,7 +150,8 @@ namespace Betrayal
                 Base_Speed_Index = 2,
                 Base_Might_Index = 2,
                 Base_Sanity_Index = 2,
-                Base_Knowledge_Index = 4
+                Base_Knowledge_Index = 4,
+                Image = "Betrayal.Resources.purple_1.png"
             });
 
             characters.Add(new Character()
@@ -166,7 +171,8 @@ namespace Betrayal
                 Base_Speed_Index = 3,
                 Base_Might_Index = 2,
                 Base_Sanity_Index = 4,
-                Base_Knowledge_Index = 2
+                Base_Knowledge_Index = 2,
+                Image = "Betrayal.Resources.purple_2.png"
             });
 
             characters.Add(new Character()
@@ -186,7 +192,8 @@ namespace Betrayal
                 Base_Speed_Index = 4,
                 Base_Might_Index = 2,
                 Base_Sanity_Index = 2,
-                Base_Knowledge_Index = 2
+                Base_Knowledge_Index = 2,
+                Image = "Betrayal.Resources.red_1.png"
             });
 
             characters.Add(new Character()
@@ -206,7 +213,8 @@ namespace Betrayal
                 Base_Speed_Index = 4,
                 Base_Might_Index = 2,
                 Base_Sanity_Index = 2,
-                Base_Knowledge_Index = 2
+                Base_Knowledge_Index = 2,
+                Image = "Betrayal.Resources.red_2.png"
             });
 
             characters.Add(new Character()
@@ -226,7 +234,8 @@ namespace Betrayal
                 Base_Speed_Index = 3,
                 Base_Might_Index = 2,
                 Base_Sanity_Index = 2,
-                Base_Knowledge_Index = 4
+                Base_Knowledge_Index = 4,
+                Image = "Betrayal.Resources.white_1.png"
             });
 
             characters.Add(new Character()
@@ -246,7 +255,8 @@ namespace Betrayal
                 Base_Speed_Index = 2,
                 Base_Might_Index = 2,
                 Base_Sanity_Index = 4,
-                Base_Knowledge_Index = 3
+                Base_Knowledge_Index = 3,
+                Image = "Betrayal.Resources.white_2.png"
             });
 
             characters.Add(new Character()
@@ -266,7 +276,8 @@ namespace Betrayal
                 Base_Speed_Index = 3,
                 Base_Might_Index = 3,
                 Base_Sanity_Index = 2,
-                Base_Knowledge_Index = 2
+                Base_Knowledge_Index = 2,
+                Image = "Betrayal.Resources.yellow_1.png"
             });
 
             characters.Add(new Character()
@@ -286,7 +297,8 @@ namespace Betrayal
                 Base_Speed_Index = 2,
                 Base_Might_Index = 3,
                 Base_Sanity_Index = 2,
-                Base_Knowledge_Index = 3
+                Base_Knowledge_Index = 3,
+                Image = "Betrayal.Resources.yellow_2.png"
             });
         }
     }

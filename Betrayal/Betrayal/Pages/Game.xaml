@@ -3,15 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:i18n="clr-namespace:Betrayal;assembly=Betrayal"
              xmlns:sk="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
-             x:Class="Betrayal.Pages.Game"
-             Title="{i18n:Translate yourcharacter}">
+             x:Class="Betrayal.Pages.Game">
     <ContentPage.Content>
         <StackLayout>
-            <Button Text="{i18n:Translate newgame}" Clicked="Restart_Button_Clicked" HorizontalOptions="Start"/>
-            <Button Text="{i18n:Translate info}" Clicked="Info_Button_Clicked" HorizontalOptions="Start"/>
-            <Button Text="{i18n:Translate reset}" Clicked="Reset_Button_Clicked" HorizontalOptions="Start"/>
-            <sk:SKCanvasView x:Name="canvas"/>
-            
+            <sk:SKCanvasView x:Name="canvas" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <StackLayout>
+                    <Button Text="+" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Reset_Button_Clicked"/>
+                    <Button Text="-" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center"/>
+                </StackLayout>
+                <StackLayout>
+                    <Button Text="+" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Button Text="-" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center"/>
+                </StackLayout>
+                <StackLayout>
+                    <Button Text="+" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Button Text="-" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center"/>
+                </StackLayout>
+                <StackLayout>
+                    <Button Text="+" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Button Text="-" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
