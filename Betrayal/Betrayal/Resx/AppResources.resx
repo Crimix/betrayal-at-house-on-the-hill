@@ -192,8 +192,8 @@
   <data name="speed_stats" xml:space="preserve">
     <value>Speed: {0}</value>
   </data>
-  <data name="yourcharacter" xml:space="preserve">
-    <value>Your Character</value>
+  <data name="game" xml:space="preserve">
+    <value>Game</value>
   </data>
   <data name="newgame" xml:space="preserve">
     <value>New game</value>

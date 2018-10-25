@@ -3,26 +3,30 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:i18n="clr-namespace:Betrayal;assembly=Betrayal"
              xmlns:sk="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
-             x:Class="Betrayal.Pages.Game">
+             x:Class="Betrayal.Pages.Game"
+             Title="{i18n:Translate game}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="newGame" Order="Primary" Text="{i18n:Translate newgame}" Priority="0" Clicked="NewGame_Clicked"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
             <sk:SKCanvasView x:Name="canvas" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                 <StackLayout>
-                    <Button Text="+" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Reset_Button_Clicked"/>
-                    <Button Text="-" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Button x:Name="mightPlus" Text="+" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Speed_Plus"/>
+                    <Button x:Name="mightMinus" Text="-" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Speed_Minus"/>
                 </StackLayout>
                 <StackLayout>
-                    <Button Text="+" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center"/>
-                    <Button Text="-" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Button x:Name="speedPlus" Text="+" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Might_Plus"/>
+                    <Button x:Name="speedMinus" Text="-" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Might_Minus"/>
                 </StackLayout>
                 <StackLayout>
-                    <Button Text="+" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center"/>
-                    <Button Text="-" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Button x:Name="sanityPlus" Text="+" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Sanity_Plus"/>
+                    <Button x:Name="sanityMinus" Text="-" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Sanity_Minus"/>
                 </StackLayout>
                 <StackLayout>
-                    <Button Text="+" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center"/>
-                    <Button Text="-" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Button x:Name="knowledgePlus" Text="+" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Knowledge_Plus"/>
+                    <Button x:Name="knowledgeMinus" Text="-" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Knowledge_Minus"/>
                 </StackLayout>
             </StackLayout>
 
