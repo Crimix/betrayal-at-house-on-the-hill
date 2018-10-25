@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Betrayal.Resx;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,25 +15,36 @@ namespace Betrayal.Pages
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ColorSelector : ContentPage
 	{
-		public ColorSelector ()
-		{
-			InitializeComponent ();
-            Dictionary<Color, string> colors = new Dictionary<Color, string>
+        Dictionary<string, Color> colors = new Dictionary<string, Color>
             {
-                { Color.BLUE, "Blue" },
-                { Color.GREEN, "Green" },
-                { Color.PURPLE, "Purple" },
-                { Color.RED, "Red" },
-                { Color.WHITE, "White" },
-                { Color.YELLOW, "Yellow" }
+                { AppResources.blue, Color.BLUE },
+                { AppResources.green, Color.GREEN },
+                { AppResources.purple, Color.PURPLE },
+                { AppResources.red, Color.RED },
+                { AppResources.white, Color.WHITE },
+                { AppResources.yellow, Color.YELLOW }
             };
 
-            listView.ItemsSource = colors;
+        public ColorSelector ()
+		{
+			InitializeComponent ();
+
+            listView.ItemsSource = colors.Keys;
         }
 
-        private void listView_ItemTapped(object sender, ItemTappedEventArgs e)
+        async private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            Console.WriteLine(e.Item);
+            if (e?.Item != null)
+            {
+                var answer = await DisplayAlert(AppResources.confirm, string.Format(AppResources.sure, e.Item), AppResources.yes, AppResources.no);
+                if (answer)
+                {
+                    Color color = Color.BLUE;
+                    colors.TryGetValue(e.Item.ToString(), out color);
+                    App.Current.MainPage = new NavigationPage(new CharacterSelector(color));
+                }
+     
+            }
         }
     }
 }

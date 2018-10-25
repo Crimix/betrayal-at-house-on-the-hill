@@ -1,12 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Betrayal.Pages.CharacterSelector">
+             xmlns:i18n="clr-namespace:Betrayal;assembly=Betrayal"
+             x:Class="Betrayal.Pages.CharacterSelector"
+             Title="{i18n:Translate characterselector}">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Padding="20,20,20,20">
+            <ListView x:Name="listView" ItemTapped="ListView_ItemTapped" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" Margin="0,0,0,20">
+                                <Label Text="{Binding Name}" FontSize="Medium" />
+                                <Label Text="{Binding Age, StringFormat={i18n:Translate age}}" FontSize="Default" />
+                                <Label Text="{Binding FormattedBirthday, StringFormat={i18n:Translate birthday}}" FontSize="Default" />
+                                <Label Text="{Binding GetDaysToBirthDay, StringFormat={i18n:Translate daystobd}}" FontSize="Default" />
+                                <Label FormattedText="{Binding FormattedSpeed}" FontSize="Default" />
+                                <Label FormattedText="{Binding FormattedMight}" FontSize="Default" />
+                                <Label FormattedText="{Binding FormattedSanity}" FontSize="Default" />
+                                <Label FormattedText="{Binding FormattedKnowledge}" FontSize="Default" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

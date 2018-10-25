@@ -1,12 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n="clr-namespace:Betrayal;assembly=Betrayal"
+             xmlns:sk="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              x:Class="Betrayal.Pages.Game">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <sk:SKCanvasView x:Name="canvas" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <StackLayout>
+                    <Button Text="+" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Reset_Button_Clicked"/>
+                    <Button Text="-" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center"/>
+                </StackLayout>
+                <StackLayout>
+                    <Button Text="+" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Button Text="-" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center"/>
+                </StackLayout>
+                <StackLayout>
+                    <Button Text="+" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Button Text="-" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center"/>
+                </StackLayout>
+                <StackLayout>
+                    <Button Text="+" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Button Text="-" WidthRequest="40" HeightRequest="40" HorizontalOptions="Center" VerticalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -1,15 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Betrayal.Pages.ColorSelector">
+             xmlns:i18n="clr-namespace:Betrayal;assembly=Betrayal"
+             x:Class="Betrayal.Pages.ColorSelector"
+             Title="{i18n:Translate colorselector}">
     <ContentPage.Content>
-        <StackLayout>
-            <ListView x:Name="listView" ItemTapped="listView_ItemTapped">
+        <StackLayout Padding="20,20,20,20">
+            <ListView x:Name="listView" ItemTapped="ListView_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
+                        <ViewCell>
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="{Binding Value}" />
+                            <Label Text="{Binding}" FontSize="Large" />
                         </StackLayout>
+                        </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
