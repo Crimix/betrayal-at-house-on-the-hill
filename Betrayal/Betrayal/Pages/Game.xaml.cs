@@ -96,12 +96,12 @@ namespace Betrayal.Pages
                         using (Stream stream = assembly.GetManifestResourceStream(s))
                         {
                             SKBitmap resourceBitmap = SKBitmap.Decode(stream);
-                            var pictureFrame = info.Rect;
-                            var imageSize = resourceBitmap.Info.Size;
-                            var dest = pictureFrame.AspectFit(imageSize); // fit the size inside the rect
+                            SKRectI pictureFrame = info.Rect;
+                            SKSizeI imageSize = resourceBitmap.Info.Size;
+                            SKRectI dest = pictureFrame.AspectFit(imageSize); // fit the size inside the rect
 
                             // draw the image
-                            var paint = new SKPaint
+                            SKPaint paint = new SKPaint
                             {
                                 FilterQuality = SKFilterQuality.High // high quality scaling
                             };
@@ -245,6 +245,20 @@ namespace Betrayal.Pages
                 DataStore.Remove(DataStoreKeys.Keys.Current_Speed);
                 App.Current.MainPage = new NavigationPage(new ColorSelector());
             }
+        }
+
+        async private void Info_Clicked(object sender, EventArgs e)
+        {
+            string[] list = new string[7];
+            list[0] = string.Format(AppResources.name, character.Name);
+            list[1] = string.Format(AppResources.age, character.Age);
+            list[2] = string.Format(AppResources.birthday, character.FormattedBirthday);
+            list[3] = string.Format(AppResources.daystobd, character.GetDaysToBirthDay);
+            list[4] = string.Format(AppResources.height, character.Height);
+            list[5] = string.Format(AppResources.weight, character.Weight);
+            list[6] = string.Format(AppResources.hobbies, character.Hobbies);
+
+            await DisplayActionSheet(AppResources.info, null, AppResources.ok, list);
         }
     }
 }

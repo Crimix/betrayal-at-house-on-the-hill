@@ -7,6 +7,7 @@
              Title="{i18n:Translate game}">
     <ContentPage.ToolbarItems>
         <ToolbarItem Name="newGame" Order="Primary" Text="{i18n:Translate newgame}" Priority="0" Clicked="NewGame_Clicked"/>
+        <ToolbarItem Name="info" Order="Primary" Text="{i18n:Translate info}" Priority="0" Clicked="Info_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>

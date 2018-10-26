@@ -207,4 +207,16 @@
   <data name="reset" xml:space="preserve">
     <value>Reset</value>
   </data>
+  <data name="height" xml:space="preserve">
+    <value>Height: {0}</value>
+  </data>
+  <data name="hobbies" xml:space="preserve">
+    <value>Hobbies: {0}</value>
+  </data>
+  <data name="ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="weight" xml:space="preserve">
+    <value>Weight: {0} lbs</value>
+  </data>
 </root>
