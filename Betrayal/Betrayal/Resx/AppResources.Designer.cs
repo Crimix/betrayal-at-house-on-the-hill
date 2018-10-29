@@ -133,11 +133,38 @@ namespace Betrayal.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Game.
+        /// </summary>
+        internal static string game {
+            get {
+                return ResourceManager.GetString("game", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Green.
         /// </summary>
         internal static string green {
             get {
                 return ResourceManager.GetString("green", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Height: {0}.
+        /// </summary>
+        internal static string height {
+            get {
+                return ResourceManager.GetString("height", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hobbies: {0}.
+        /// </summary>
+        internal static string hobbies {
+            get {
+                return ResourceManager.GetString("hobbies", resourceCulture);
             }
         }
         
@@ -210,6 +237,15 @@ namespace Betrayal.Resx {
         internal static string no {
             get {
                 return ResourceManager.GetString("no", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ok.
+        /// </summary>
+        internal static string ok {
+            get {
+                return ResourceManager.GetString("ok", resourceCulture);
             }
         }
         
@@ -295,6 +331,15 @@ namespace Betrayal.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Weight: {0} lbs.
+        /// </summary>
+        internal static string weight {
+            get {
+                return ResourceManager.GetString("weight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to White.
         /// </summary>
         internal static string white {
@@ -318,15 +363,6 @@ namespace Betrayal.Resx {
         internal static string yes {
             get {
                 return ResourceManager.GetString("yes", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Your Character.
-        /// </summary>
-        internal static string yourcharacter {
-            get {
-                return ResourceManager.GetString("yourcharacter", resourceCulture);
             }
         }
     }
