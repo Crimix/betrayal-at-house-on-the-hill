@@ -201,7 +201,7 @@ namespace Betrayal
                 ID = 8,
                 Name = "Ox Bellows",
                 Age = 23,
-                Birthday = new DateTime(DateTime.Now.Year, 6, 6),
+                Birthday = new DateTime(DateTime.Now.Year, 10, 18),
                 Color = Color.RED,
                 Height = "6'4",
                 Weight = 288,
