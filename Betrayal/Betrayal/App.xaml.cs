@@ -24,6 +24,7 @@ namespace Betrayal
                 DependencyService.Get<ILocalize>().SetLocale(ci);
             }
 
+            characters.Clear();
             CreateCharacters();
             if (DataStore.Get(DataStoreKeys.Keys.Character_ID) == null)
                 MainPage = new NavigationPage(new ColorSelector());
